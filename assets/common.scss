@@ -1,0 +1,76 @@
+@import './box.scss';
+// 主题色
+$theamColor:orange;
+//管理后台最上面的header的高度
+$headerHeight:100px;
+
+
+
+
+*{
+    // background-color:red;
+}
+
+
+
+// 所有的a标签去掉下划线
+// 颜色改变为主题色
+a{
+    text-decoration: none;
+    color: $theamColor;
+}
+
+
+//-------------------------------------常用css-------------------------------------
+
+// 超出一行自动换行
+.ymoreTitle1{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp:1;
+ 
+}
+
+
+//超出两行自动换行
+.ymoreTitle2{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp:2;
+}
+
+//超出两行自动换行
+.ymoreTitle3{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-line-clamp:3;
+}
+
+
+
+// 主题色
+.ytheamColor{
+    color:$theamColor;
+}
+
+//鼠标变成小手
+.ymouse{
+    cursor: pointer;
+}
+
+
+//消除滚动条
+.y-no-scrollBar{
+     &::-webkit-scrollbar {
+        display: none; /* Chrome Safari */
+     }
+     scrollbar-width: none; /* Firefox */
+     -ms-overflow-style: none; /* IE 10+ */
+}
+
