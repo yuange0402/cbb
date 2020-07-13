@@ -5,8 +5,8 @@
      </div>
 </template>
 <script>
-import topMsg from '@/components/index/appDetail/topMsg'
-import bottomMsg from '@/components/index/appDetail/bottomMsg' 
+import topMsg from '@/components/index/app/appDetail/topMsg'
+import bottomMsg from '@/components/index/app/appDetail/bottomMsg' 
 export default {
     data(){
         return{

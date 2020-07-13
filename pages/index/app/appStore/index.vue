@@ -1,9 +1,19 @@
 <template>
     <div class="appStore">
+      <el-breadcrumb separator-class="el-icon-arrow-right">
+         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
+         <el-breadcrumb-item>活动管理</el-breadcrumb-item>
+         <el-breadcrumb-item>活动列表</el-breadcrumb-item>
+         <el-breadcrumb-item>活动详情</el-breadcrumb-item>
+      </el-breadcrumb>
+
+
+       <div class="box">
          <div class="header">
               <search/>
               <div class="sort ymouse">
                   <span :class="{'sortActive':sortType ==0}" @click="sortType = 0">最新</span>
+                  <span style="margin:0px 5px; color:#999">|</span>
                   <span :class="{'sortActive':sortType ==1}" @click="sortType = 1">最热</span>
               </div>
          </div>
@@ -18,13 +28,14 @@
                   layout="prev, pager, next"
                   :total="1000">
                </el-pagination>
+         </div> 
          </div>
     </div>
 </template>
 
 <script>
-import search from '@/components/index/appStore/search';
-import appList from '@/components/index/appStore/appList';
+import search from '@/components/index/app/appStore/search';
+import appList from '@/components/index/app/appStore/appList';
 export default {
     data(){
        return{
@@ -59,22 +70,35 @@ export default {
 </script>
 <style lang="scss" scoped>
     .appStore{
+         *{
+            color: $color1;
+         }
+
          width: 100%;
-         height: 100%;
-         background: #999;
+         // height: 100%;
+         //background:$bgColor;
+         // overflow-y: scroll;
+         //border: 1px solid red;
+         padding: 0;
+         // padding-bottom: 20px;
+         .box{
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            padding: 10px;
+            padding-bottom:100px;
+         }
      
 
 
          .header{
-            border: 5px solid darkblue;
-            height:80px;
+            // border: 2px solid darkblue;
+            // height:80px;
             position: relative;
 
             .sort{
-                border: 1px solid red;
-                position: absolute;
-                bottom: 0;
-                right: 0;
+               //  border: 1px solid red;
+                margin: 30px 0px;
             }
 
             .sortActive{
@@ -84,9 +108,11 @@ export default {
          }
 
          .main{
-            height:calc(100% - 130px);
-            border: 2px solid darkcyan;
-            overflow-y: scroll;
+            // border: 2px solid darkcyan;
+
+            .list{
+
+            }
 
           
 
@@ -95,12 +121,9 @@ export default {
 
 
          .footer{
-            border: 1px solid red;
-            height:50px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-             
+            // border: 1px solid red;
+             text-align: center;
+             margin-top: 50px;
          }
 
     }

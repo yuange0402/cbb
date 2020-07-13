@@ -1,0 +1,15 @@
+// 按钮
+
+//danger按钮#EB1836  #FB285F
+.el-button--danger {
+    color: #FFF;
+    background: linear-gradient(to right,#EB1836,#FB285F);
+    // background-color: #F56C6C;
+    border-color: #EB1836; 
+}
+
+.el-button--primary{
+    background: linear-gradient(to right,#237BE8,#4191F3);
+}
+
+

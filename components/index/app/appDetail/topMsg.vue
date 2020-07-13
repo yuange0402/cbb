@@ -38,7 +38,7 @@ export default {
               console.log("去确认订单页面");
 
               this.$router.push({
-                  path:"/confirmOrder"
+                  path:"/app/confirmOrder"
               })
          }
      }

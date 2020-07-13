@@ -1,6 +1,8 @@
 <template>
     <div class="userHead ymouse">
-        <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy8xaFJlSGFxYWZhZWljOHAzTHJXZ2VKRVlKblNHTGJKc0JqeWhGZEl3dk9ScEkwNmRpY0ZDVkt1SnB6TDhjam5oZWswSktGM0JKbTNIMG42NXAwZENQeVdRLzY0MA?x-oss-process=image/format,png">
+        <div class="imgW">
+            <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy8xaFJlSGFxYWZhZWljOHAzTHJXZ2VKRVlKblNHTGJKc0JqeWhGZEl3dk9ScEkwNmRpY0ZDVkt1SnB6TDhjam5oZWswSktGM0JKbTNIMG42NXAwZENQeVdRLzY0MA?x-oss-process=image/format,png">
+        </div>
         <div class="list">
              <div>
                  <nuxt-link to='/accountCenter'>账户管理</nuxt-link>
@@ -32,34 +34,59 @@ export default {
 </script>
 <style lang="scss" scoped>
     .userHead{
-        border: 1px solid red;
-        display: inline-block;
+        // border: 1px solid red;
+        // display: inline-block;
         width: 100px;
-        height: 100px;
+        height: 100%;
+        border-radius: 10px;
+        margin-top:1px;
+        
+
+
        
 
         &:hover{
             &> .list{
                 display:block!important;
+                 background-color:#999999;
             }
+            background-color:#999999;
             
+        }
+
+        .imgW{
+            width:$headerHeight;
+            height:$headerHeight;
+           
+            margin: auto;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+
+            &>img{
+                width:35px;
+                height:35px;
+                  border-radius: 5px;
+            }
         }
         
 
-        &>img{
-             width: 100%;
-             height: 100%;
-        }
 
       
         .list{
-            background-color:red;
+            // background-color:red;
             width: 100%;
             height: 100px;
             position: relative;
             z-index:999;
             display: none;
              transform: translateY(-3px);
+             padding-top: 20px;
+             border-radius: 0px 0px 10px 10px;
+             margin-top: -5px;
 
             &>div{
                 text-align: center;
