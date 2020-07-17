@@ -23,29 +23,36 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '//at.alicdn.com/t/font_1941468_maz5ffnpf5.css' }
+    ], 
+    // script: [
+    //   {src: '//at.alicdn.com/t/font_1941468_maz5ffnpf5.css', async: true}
+    // ],
   },
   /*
   ** Global CSS
   */
   css: [
     'element-ui/lib/theme-chalk/index.css',
-    '@/assets/common.scss'
-  ],
+    '@/assets/common.scss',
+    '@/assets/iconfont.css', 
+  ], 
   /*
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
-  plugins: [
+  plugins: [ 
     '@/plugins/element-ui',
     '@/plugins/main',
   ],
 
   // 配置这个可以让scss全局文件中的变量直接在其他组件中使用
   //如果不配置可以手动引入到组件中使用
-  styleResources: {     
-    scss: './assets/common.scss'
-  }, 
+  // styleResources: {     
+  //   scss: './assets/common.scss'
+  // }, 
 
   /*
   ** Auto import components

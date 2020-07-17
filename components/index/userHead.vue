@@ -1,7 +1,7 @@
 <template>
     <div class="userHead ymouse">
         <div class="imgW">
-            <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy8xaFJlSGFxYWZhZWljOHAzTHJXZ2VKRVlKblNHTGJKc0JqeWhGZEl3dk9ScEkwNmRpY0ZDVkt1SnB6TDhjam5oZWswSktGM0JKbTNIMG42NXAwZENQeVdRLzY0MA?x-oss-process=image/format,png">
+            <img src="../../static/img/loginBg.png">  
         </div>
         <div class="list">
              <div>
@@ -33,6 +33,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../../assets/common.scss'; 
     .userHead{
         // border: 1px solid red;
         // display: inline-block;

@@ -3,7 +3,7 @@
             <div class="listItem ymouse" @click="toAppDetail" v-for="(item,idx) in 20" :key="idx">
                 <div class="imgW">
                     <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy8xaFJlSGFxYWZhZWljOHAzTHJXZ2VKRVlKblNHTGJKc0JqeWhGZEl3dk9ScEkwNmRpY0ZDVkt1SnB6TDhjam5oZWswSktGM0JKbTNIMG42NXAwZENQeVdRLzY0MA?x-oss-process=image/format,png">
-                    <div class="mark mark1">已采购</div>
+                    <div class="ymark ymark1">已采购</div>
                     <!-- <div class="mark mark2">升级中</div> -->
                     <!-- <div class="mark mark3">已过期</div> -->
                 </div>
@@ -16,7 +16,8 @@
                     <div class="msg">
                         <span class="number">188亿人开通</span>
                         <span class="btnW">
-                              <el-button type="danger" size="mini">免费</el-button>
+                              <el-button type="danger" class="ydanger" size="mini">免费</el-button>
+                              <el-button type="danger" class="ydanger" size="mini">免费</el-button>
                         </span>
                     </div>
                 </div>
@@ -43,6 +44,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../../../../assets/common.scss';
    .list{
        display: flex;
        flex-wrap: wrap;
@@ -64,7 +66,7 @@ export default {
                 position: relative;
                 overflow: hidden;
 
-                .mark{
+                .ymark{
                     position: absolute;
                     width:75%;
                     height:75%;
@@ -80,21 +82,6 @@ export default {
                     align-items:flex-end;
                     padding: 3px;
                     justify-content: center;
-                }
-
-                .mark1{
-                    background-color: #17D945;
-                    color: #fff;
-                }
-
-                .mark2{
-                    background-color: #237BE8;
-                    color: white;
-                }
-
-                .mark3{
-                    background-color: orange;
-                    color: white;
                 }
 
 
@@ -118,7 +105,7 @@ export default {
                     font-size: 18px;
                     font-family:Microsoft YaHei;
                     font-weight:bold;
-                    color:rgba(51,51,51,1);
+                    color:#333333;
                     .label{
                         background-color:#E0EEFF;
                         color: #237BE8;

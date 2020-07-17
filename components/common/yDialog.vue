@@ -1,10 +1,11 @@
 <template>
     <el-dialog
-        :title="title"
         :visible.sync="show"
         :width = "ywidth"
-        
         > 
+        <span slot = "title" style="font-weight:600">
+           {{title}}
+        </span>
       
         <div>
              <slot name = "msg"></slot>
@@ -19,7 +20,7 @@
   export default {
     data() {
       return {
-        show:false,
+        show:true,
       };
     },
     props:{
@@ -43,7 +44,8 @@
     }
   };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
+@import '../../assets/common.scss';
   .el-dialog{
       border-radius: 10px;
       overflow: hidden;

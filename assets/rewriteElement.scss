@@ -1,15 +1,23 @@
 // 按钮
 
 //danger按钮#EB1836  #FB285F
-.el-button--danger {
+.ydanger {
     color: #FFF;
     background: linear-gradient(to right,#EB1836,#FB285F);
     // background-color: #F56C6C;
     border-color: #EB1836; 
 }
 
-.el-button--primary{
+
+//修改主要按钮样式
+.yprimary{
     background: linear-gradient(to right,#237BE8,#4191F3);
+}
+
+// 修改 警告按钮样式
+.ywarning{
+    background: linear-gradient(to right,#FF9937,#FFC573);
+    border-color: white;
 }
 
 

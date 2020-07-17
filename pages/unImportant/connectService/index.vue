@@ -10,15 +10,46 @@
                         <div class="left">{{item.title}}</div>
                         <div class="right"><span class="number">{{item.number}}</span>
                             <span class="ymouse" @click="copy('111111111')" @mouseleave="mouseLeave">
+                                <el-tooltip class="item" effect="dark" :content="copyMsg" placement="right-start">
+                                <svg t="1594347730557" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4243" width="15" height="15"><path d="M931.882 131.882l-103.764-103.764A96 96 0 0 0 760.236 0H416c-53.02 0-96 42.98-96 96v96H160c-53.02 0-96 42.98-96 96v640c0 53.02 42.98 96 96 96h448c53.02 0 96-42.98 96-96v-96h160c53.02 0 96-42.98 96-96V199.764a96 96 0 0 0-28.118-67.882zM596 928H172a12 12 0 0 1-12-12V300a12 12 0 0 1 12-12h148v448c0 53.02 42.98 96 96 96h192v84a12 12 0 0 1-12 12z m256-192H428a12 12 0 0 1-12-12V108a12 12 0 0 1 12-12h212v176c0 26.51 21.49 48 48 48h176v404a12 12 0 0 1-12 12z m12-512h-128V96h19.264c3.182 0 6.234 1.264 8.486 3.514l96.736 96.736a12 12 0 0 1 3.514 8.486V224z" p-id="4244"></path></svg>
+                                </el-tooltip>
+                            </span>
+                        </div>
+                    </div>
+               </div>
+               <div class="list">
+                    <div class="listItem connectBox" v-for="item in 3" :key = "item">
+                         <img src="../../../static/img/loginBg.png" alt=""> 
+                         <div class="connectMsg">
+                              <div class="cTop">客服微信：</div>
+                              <div class="cbottom">
+                                  1865548555&nbsp;
+                                   <span class="ymouse" @click="copy('111111111')" @mouseleave="mouseLeave">
+                                        <el-tooltip class="item" effect="dark" :content="copyMsg" placement="right-start">
+                                        <svg t="1594347730557" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4243" width="15" height="15"><path d="M931.882 131.882l-103.764-103.764A96 96 0 0 0 760.236 0H416c-53.02 0-96 42.98-96 96v96H160c-53.02 0-96 42.98-96 96v640c0 53.02 42.98 96 96 96h448c53.02 0 96-42.98 96-96v-96h160c53.02 0 96-42.98 96-96V199.764a96 96 0 0 0-28.118-67.882zM596 928H172a12 12 0 0 1-12-12V300a12 12 0 0 1 12-12h148v448c0 53.02 42.98 96 96 96h192v84a12 12 0 0 1-12 12z m256-192H428a12 12 0 0 1-12-12V108a12 12 0 0 1 12-12h212v176c0 26.51 21.49 48 48 48h176v404a12 12 0 0 1-12 12z m12-512h-128V96h19.264c3.182 0 6.234 1.264 8.486 3.514l96.736 96.736a12 12 0 0 1 3.514 8.486V224z" p-id="4244"></path></svg>
+                                        </el-tooltip>
+                                    </span>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+      
+
+
+               <!-- <div class="list">
+                    <div class="listItem" v-for="item in connectList" :key="item.title">
+                        <div class="left">{{item.title}}</div>
+                        <div class="right"><span class="number">{{item.number}}</span>
+                            <span class="ymouse" @click="copy('111111111')" @mouseleave="mouseLeave">
                                 <el-tooltip class="item" effect="dark" @mouseleave="mouseLeave" :content="copyMsg" placement="right-start">
                                 <svg t="1594347730557" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4243" width="15" height="15"><path d="M931.882 131.882l-103.764-103.764A96 96 0 0 0 760.236 0H416c-53.02 0-96 42.98-96 96v96H160c-53.02 0-96 42.98-96 96v640c0 53.02 42.98 96 96 96h448c53.02 0 96-42.98 96-96v-96h160c53.02 0 96-42.98 96-96V199.764a96 96 0 0 0-28.118-67.882zM596 928H172a12 12 0 0 1-12-12V300a12 12 0 0 1 12-12h148v448c0 53.02 42.98 96 96 96h192v84a12 12 0 0 1-12 12z m256-192H428a12 12 0 0 1-12-12V108a12 12 0 0 1 12-12h212v176c0 26.51 21.49 48 48 48h176v404a12 12 0 0 1-12 12z m12-512h-128V96h19.264c3.182 0 6.234 1.264 8.486 3.514l96.736 96.736a12 12 0 0 1 3.514 8.486V224z" p-id="4244"></path></svg>
                                 </el-tooltip>
                             </span>
                         </div>
                     </div>
-                </div>
+                </div> -->
           <div class="btnW">
-                 <el-button plain round @click="$router.go(-1)">返回登录</el-button>
+                 <el-button  plain round @click="$router.go(-1)">返回登录</el-button>
           </div>
                
                
@@ -45,14 +76,14 @@ export default {
                     title:"客服qq：",
                     number:"2222222"
                 },
-                {
-                    title:"客服qq群：",
-                    number:"1000000"
-                },
-                {
-                    title:"客服邮箱：",
-                    number:"788888888"
-                },
+                // {
+                //     title:"客服qq群：",
+                //     number:"1000000"
+                // },
+                // {
+                //     title:"客服邮箱：",
+                //     number:"788888888"
+                // },
             ]
          }
 
@@ -79,30 +110,35 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@import '../../../assets/common.scss';
      .connectService{
         //  border: 5px solid red;
          width: 100%;
         //  height:100vh;
         //  margin:0 0 10vw;
         margin-bottom: 6vw;
-         
-             img{
+        min-width: 1200px;
+
+        .imgW{
+            img{
                 width: 100%;
                 height: auto;
              }   
+        }
+         
 
 
          .box{
             // border: 5px solid red;
             padding:8vmin 0 3vmin;
-            width:60%;
+            width:100%;
             // height:60%;
-            margin-left: 20%;
-            margin-top:-3%;
+            // margin-left: 20%;
+            // margin-top:-3%;
             position: relative;
             z-index:99;
-            background:rgba(255,255,255,1);
-            box-shadow:0px 0px 12px 0px rgba(46,46,46,0.19);
+            // background:rgba(255,255,255,1);
+            // box-shadow:0px 0px 12px 0px rgba(46,46,46,0.19);
             border-radius:10px;
             display: flex;
             flex-direction: column;
@@ -111,14 +147,19 @@ export default {
 
 
             .title{
-                 font-size: 1.6vw;
+                //  font-size: 1.6vw;
                  text-align: center;
+
+                font-size:24px;
+                font-family:Microsoft YaHei;
+                font-weight:bold;
             }
 
             .list{
                 //  border: 1px solid red;
                 //  text-align:left;
                 // transform: translateX(0vw);
+                display: flex;
                  margin-top:2vw;
                  .listItem{
                      margin: 1.2vw;
@@ -128,18 +169,59 @@ export default {
                      color: #999;
 
                      .number{
-                         margin: 0 3vw;
+                         margin: 0 0.5vw;
                          color: #333;
                      }
                    
 
                  }
             }
+            
+            
+                 .connectBox{
+                        width:298px;
+                        height:120px;
+                        border:1px solid rgba(209,209,209,1);
+                        border-radius:6px;
+                        // border: 1px solid red;
+
+                        display: flex;
+                        justify-content:flex-start!important;
+                        padding: 0px 18px;
+                        align-items: center;
+                        img{
+                            width:85px;
+                            height:85px;
+                            border-radius: 3px;
+                        }
+
+                        .connectMsg{
+                            //   border: 1px solid red;
+                              margin-left: 20px;
+                              .cTop{
+                                  margin:5px;
+                              }
+
+                              .cBottom{
+                                  margin:5px;
+                              }
+                        }
+                 }
+
+
 
             .btnW{
                 text-align: center;
                 // border: 1px solid red;
                 margin-top:5vmin;
+
+                button{
+                    font-size:18px;
+                    padding: 15px 50px;
+                    font-family:Microsoft YaHei;
+                    font-weight:400;
+                    color:rgba(51,51,51,1);
+                }
             }
          }
      }

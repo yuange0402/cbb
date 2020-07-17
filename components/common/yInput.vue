@@ -48,6 +48,7 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+@import '../../assets/common.scss';
    .inputW{
         width: 100%;
         // border: 1px solid red;

@@ -1,6 +1,6 @@
 <template>
     <div class="appStore">
-      <el-breadcrumb separator-class="el-icon-arrow-right">
+      <el-breadcrumb separator-class="el-icon-arrow-right" class="bread">
          <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
          <el-breadcrumb-item>活动管理</el-breadcrumb-item>
          <el-breadcrumb-item>活动列表</el-breadcrumb-item>
@@ -8,7 +8,7 @@
       </el-breadcrumb>
 
 
-       <div class="box">
+      <div class="ybox">
          <div class="header">
               <search/>
               <div class="sort ymouse">
@@ -30,12 +30,12 @@
                </el-pagination>
          </div> 
          </div>
-    </div>
+      </div>
 </template>
 
 <script>
-import search from '@/components/index/app/appStore/search';
-import appList from '@/components/index/app/appStore/appList';
+import search from '../../../../components/index/app/appStore/search';
+import appList from '../../../../components/index/app/appStore/appList';
 export default {
     data(){
        return{
@@ -69,8 +69,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+
+@import '../../../../assets/common.scss';
     .appStore{
-         *{
+         div,span{
             color: $color1;
          }
 
@@ -81,13 +83,14 @@ export default {
          //border: 1px solid red;
          padding: 0;
          // padding-bottom: 20px;
-         .box{
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            padding: 10px;
-            padding-bottom:100px;
+
+        .bread{
+           margin: 10px 0px 20px;
+         //   border: 1px solid red;
+           
          }
+
+
      
 
 

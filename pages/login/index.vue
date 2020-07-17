@@ -1,6 +1,6 @@
 <template>
     <div class="login">
-            <img src="../../static/img/loginBg.png" alt=""> 
+            <!-- <img src="../../static/img/loginBg.png" alt="">  -->
             <div class="login-panel">
                 <el-form :model="ruleForm" :rules="rules" ref="ruleForm">
                     <p class="header">
@@ -23,12 +23,12 @@
                                  <yInput ref='code' v-model="ruleForm.code" :placeholder="'验证码'" class="code"/>
                                  <!-- <el-button type="primary" plain>主要按钮</el-button> -->
                                  <!-- <div class="codeBtn"></div> -->
-                                 <el-button type="primary" size="mini" round plain @click="getCode" :class="{'codeBtn':true,'codeSend':codeMsgNum!=0}">{{codeMsg}}</el-button>
+                                 <el-button type="primary"  size="mini" round plain @click="getCode" :class="{'codeBtn':true,'codeSend':codeMsgNum!=0}">{{codeMsg}}</el-button>
                             </div> 
                         </el-form-item>
 
 
-                        <el-button type="primary" @click="submitForm('ruleForm')" class="loginBtn">登录</el-button>
+                        <el-button type="primary"  @click="submitForm('ruleForm')" class="loginBtn yprimary">登录</el-button>
                         
 
 
@@ -50,9 +50,9 @@
                 </el-form>
             </div>
 
-             <yDialog ref = 'dialog' :title="'用户协议'" :ywidth="'90%'"> 
+             <yDialog ref = 'dialog' :title="'用户协议'" :ywidth="'60%'"> 
                    <div slot='msg'>
-1111111111111111111
+                        1111111111111111111
                        <div v-for="item in 100" :key="item">用户协议</div>
                    </div>
                    <span slot="footer" class="dialog-footer">
@@ -63,7 +63,7 @@
 </template>
 <script>
 // import Header from '@/components/login/header'
-import yInput from '@/components/common/yInput';
+import yInput from '../../components/common/yInput';
 export default {
     layout:'null',
     data(){
@@ -227,6 +227,7 @@ export default {
 
 </script>
 <style lang="scss" scoped>
+@import '../../assets/common.scss';
    .login{
         //border:5px solid red;
         //background:url('../../static/img/loginBg.png');
@@ -253,7 +254,7 @@ export default {
           .login-panel{
               position:absolute;
               right:10%;
-              width:304px;
+              width:350px;
             //   height:482px;
               background:rgba(255,255,255,1);
               box-shadow:0px 0px 24px 0px rgba(46,46,46,0.19);

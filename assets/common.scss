@@ -6,6 +6,7 @@
 
 *{
     // background-color:red;
+    box-sizing: border-box;
    
 }
 
@@ -82,4 +83,59 @@ html,body{
 .yradius{
     border-radius: 10px;
 }
+
+
+
+//每一个子路由的box
+.ybox{
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 15px;
+    padding-bottom:70px;
+ }
+
+
+
+
+// 应用商店图片上面的装填标记
+// 父元素一定要加上relative
+ .ymark{
+    position: absolute;
+    width:75%;
+    height:75%;
+    top: -50%;
+    left:-50%;
+    box-sizing: border-box;
+    // background-color:black;
+    transform: rotate(-45deg);
+    // color: white;
+    font-size: 13px;
+
+    display: flex;
+    align-items:flex-end;
+    padding: 3px;
+    justify-content: center;
+}
+
+.ymark1{
+    background-color: #17D945;
+    color: #fff;
+}
+
+.ymark2{
+    background-color: #237BE8;
+    color: white;
+}
+
+.ymark3{
+    background-color: orange;
+    color: white;
+}
+
+.ybread{
+    margin: 10px 0px 20px;
+}
+
+
 

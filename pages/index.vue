@@ -2,12 +2,12 @@
   <div class="wrapper">
        <!-- 头部 -->
         <div class="header">
-            <div class="logo">
-                 <img src="https://imgconvert.csdnimg.cn/aHR0cHM6Ly9tbWJpei5xcGljLmNuL21tYml6X2pwZy8xaFJlSGFxYWZhZWljOHAzTHJXZ2VKRVlKblNHTGJKc0JqeWhGZEl3dk9ScEkwNmRpY0ZDVkt1SnB6TDhjam5oZWswSktGM0JKbTNIMG42NXAwZENQeVdRLzY0MA?x-oss-process=image/format,png">
+            <div class="logo"> 
+                 <img src="../static/img/loginBg.png"> 
             </div>
 
              <userHead  class="userHead"/>
-              <el-button  type="primary" class="indexBtn" >
+              <el-button  type="primary" class="indexBtn yprimary" >
                   查看平台首页
               </el-button>
         </div>
@@ -72,9 +72,6 @@
                         </el-menu-item>
                 </el-menu>
 
-
-
-
                       <!-- <div class="ymenu">
                            <div class="menuItem">
                                 <div class="itemTitle">概览</div>
@@ -94,8 +91,8 @@
 </div>
 </template>
 <script>
-import chartTest from '@/components/echart/test'
-import userHead from '@/components/index/userHead'
+import chartTest from '../components/echart/test'
+import userHead from '../components/index/userHead'
   export default {
       components:{
           chartTest
@@ -297,6 +294,7 @@ import userHead from '@/components/index/userHead'
   }
 </script>
 <style lang="scss" scoped>
+  @import '../assets/common.scss';
   .wrapper{
     // border:3px solid darkmagenta;
     height: 100vh;
@@ -365,6 +363,7 @@ import userHead from '@/components/index/userHead'
             .is-active {
                 // color: #fff;
                 background-color:#fff;
+                  border-left: 3px solid $theamColor!important;
                 
             }
         }
@@ -442,7 +441,7 @@ import userHead from '@/components/index/userHead'
 
         .right{
             //   border: 3px solid red; 
-              height:calc(100% - 85px);
+              height:calc(100% - 56px);
               overflow: scroll; 
               background-color:$bgColor;
               padding: 15px;
@@ -456,6 +455,14 @@ import userHead from '@/components/index/userHead'
     
 </style>
 <style lang="scss">
+ @import '../assets/common.scss';
+
+   .left1{
+       .is-active{
+        //    border:5px solid red;
+         
+       }
+   }
 
         
 

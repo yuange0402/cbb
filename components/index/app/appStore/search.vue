@@ -13,13 +13,21 @@ export default{
     },
     methods:{
        search(){ 
-            console.log(this.keyword,"搜索关键字=======")
+            console.log(this.keyword,"搜索关键字=======");
+             const h = this.$createElement;
+
+        this.$notify({
+          title: '标题名称',
+          message: h('div', { style: 'color: teal'},"搜索"+ this.keyword)
+        });
        }
     }
    
 }
 </script>
 <style lang="scss" scoped>
+
+@import '../../../../assets/common.scss';
    .search{
     //    border: 3px solid red;
     //    padding: 10px;
